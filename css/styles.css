@@ -1,18 +1,19 @@
 
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 * {
-	font-family: 'Roboto', sans-serif;
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
-	text-rendering: optimizeLegibility !important;
-	-webkit-font-smoothing: antialiased !important;
+	font-family: 'Open Sans', sans-serif;
+	color: #404040;
 }
 
 body {
 	margin: 0;
 }
 
+textarea:focus, input:focus{
+    outline: none;
+}
+
 a {
 	text-decoration: none;
-
 }
