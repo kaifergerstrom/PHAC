@@ -8,12 +8,21 @@
 
 body {
 	margin: 0;
+	background-color: #EFF3F5;
 }
 
-textarea:focus, input:focus{
+textarea:focus, input:focus, button:focus{
     outline: none;
 }
 
 a {
 	text-decoration: none;
+}
+
+img {
+	object-fit: cover;
+}
+
+button {
+	cursor: pointer;
 }

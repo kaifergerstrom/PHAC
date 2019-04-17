@@ -1,0 +1,97 @@
+
+.header {
+	width: 100%;
+	background-color: #253042;
+	height: 75px;
+
+	display: flex; 
+	align-items: center; 
+	color: #7A8AA3;
+
+	justify-content: center;
+}
+
+.header-profile-img {
+	height: 50px;
+	border-radius: 50%;
+}
+
+.header-notifications i {
+	color: #7A8AA3;
+	font-size: 25px;
+}
+
+.header-search {
+	height: 50px;
+	width: 350px;
+	padding: 0px 10px;
+	background-color: #2F3D54;
+}
+
+.header-search i {
+	color: #7A8AA3;
+}
+
+.header-search-input {
+	height: 100%;
+	width: 90%;
+	margin-right: 5px;
+	background-color: #2F3D54;
+	border: 0;
+	color: #7A8AA3;
+	text-indent: 10px;
+}
+
+.header-search-input::placeholder {
+	color: #7A8AA3;
+}
+
+.header-notifications {
+	width: 150px;
+
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+
+	margin: 0px 30px;
+
+}
+
+.icon-spacer {
+	margin: 0px 15px;
+}
+
+.header-options a {
+	color: #7A8AA3;
+	text-transform: uppercase;
+}
+
+.option-spacer {
+	margin: 0px 20px;
+}
+
+.header-options {
+	width: 550px;
+
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+
+	margin-right: 30px;
+
+}
+
+.notifications-amount {
+	position: absolute;
+	border-radius: 50%;
+	width: 18px;
+	height: 18px;
+	font-size: 13px;
+	color: white;
+	background-color: #FF7043;
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+	top: 15px;
+	margin-left: 9px;
+}

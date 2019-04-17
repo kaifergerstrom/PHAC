@@ -1,6 +1,6 @@
 <?php
 
-require('classes/DB.php');
+require_once('classes/DB.php');
 
 if (isset($_COOKIE['SNID'])) {
 	DB::query('DELETE FROM login_tokens WHERE token=:token', array(':token'=>sha1($_COOKIE['SNID'])));

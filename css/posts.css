@@ -1,0 +1,161 @@
+
+.home-posts-container {
+
+	margin-top: 50px;
+
+}
+
+
+.post {
+
+	width: 600px;
+	background-color: #F6F8F9;
+
+	/* Smooth box shadow */
+	-webkit-box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.05);
+	-moz-box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.05);
+	box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.05);
+
+	padding: 30px;
+
+	display: block;
+	margin: 0 auto;
+
+}
+
+.post-spacer {
+	display: block;
+	margin: 20px 0px;
+}
+
+.forum-topics {
+	width: 100%;
+	background-color: transparent;
+	height: 55px;
+	border: 1px ;
+	-webkit-box-shadow:0px .5px .5px rgba(0,0,0,0.1);
+	-moz-box-shadow:0px .5px .5px rgba(0,0,0,0.1);
+	box-shadow:0px .5px .5px rgba(0,0,0,0.1);
+
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+}
+
+.forum-topics form {
+	position: absolute;
+}
+
+/* #FF7043 */
+.topic-toggle {
+	border-radius: 25px;
+	padding: 5px 25px;
+	background-color: white;
+	border: 0;
+	color: #99A6AD !important;   
+	cursor: pointer;
+	margin-left: 25px;
+	text-transform: uppercase;
+}
+
+.post-picture {
+	width: 100%;
+	max-height: 350px;
+	padding-bottom: 15px;
+}
+
+.post-profile-pic {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+}
+
+.user-info {
+	padding-bottom: 15px;
+
+	display: flex; 
+	align-items: center; 
+
+}
+
+.poster-name {
+	font-weight: bold;
+	margin-left: 18px;
+}
+
+.poster-name span {
+	font-weight: normal;
+	display: block;
+	font-size: 12px;
+	color: #99A6AD;
+}
+
+.post-title {
+	font-size: 25px;
+	font-weight: bold;
+	margin: 10px 0px;
+}
+
+.post-preview {
+	color: #99A6AD;
+	padding: 5px 0px;
+}
+
+.post-info {
+	height: 60px;
+	margin-top: 25px;
+
+	border-top: 1px solid rgba(125,125,125,0.2);
+
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+
+}
+
+.vote-button {
+	background-color: #C3CCD3;
+	width: 35px; 
+	height: 35px;
+	border-radius: 50%;
+
+	display: flex; 
+	justify-content: center;
+}
+
+.vote-button i {
+	color: white;
+	font-size: 25px;
+	padding-top: 4px;
+}
+
+.vote-spacer {
+	margin: 0px 10px;
+}
+
+.vote-button:hover {
+	background-color: #FF7043;
+	cursor: pointer;
+}
+
+.topic-checkbox {
+	display: none
+}
+
+.topic-checkbox:checked + .topic-toggle {
+	color: #FF7043 !important;
+}
+
+.active-topic {
+	color: #FF7043;
+}
+
+.refresh-topics {
+	color: white;
+	font-weight: bold;
+	margin-left: 20px;
+	background-color: #FF7043;
+	border: 0;
+	border-radius: 25px;
+	padding: 5px 25px;
+}
