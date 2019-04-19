@@ -1,0 +1,169 @@
+.overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 100;
+	background-color: rgba(255, 255, 255, 0.95);
+	align-items: center;
+	justify-content: center;
+
+	position:fixed;
+
+	display: none;
+
+	flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.upload-form {
+	width: 550px;
+}
+
+.upload-input {
+	width: 100%;
+	height: 55px;
+	border: 0;
+	/* Smooth box shadow */
+	-webkit-box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.05);
+	-moz-box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.05);
+	box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.05);
+	text-indent: 15px;
+}
+
+.form-spacer {
+	margin: 20px 0px;
+	display: block;
+}
+
+.title-input {
+	font-size: 20px;
+}
+
+.body-input {
+	resize: none;
+	height: 150px;
+	padding-top: 15px;
+	font-size: 16px;
+}
+
+.form-title {
+	font-size: 28px;
+}
+
+.file-button {
+	border-radius: 3px;
+	padding: 10px 15px;
+	margin-top: 20px;
+	background-color: #FF684A;
+	color: white;
+}
+
+#picture-upload {
+	display: none;
+}
+
+.file-upload-container {
+	margin: 25px 0px;
+}
+
+.post-topic {
+	width: 96%;
+	height: 55px;
+	border: 0;
+	/* Smooth box shadow */
+}
+
+.select-wrapper i {
+	margin-right: 20px;
+}
+
+.select-wrapper {
+	position: relative;
+	/*Don't really need this just for demo styling*/
+	float: left;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	-webkit-box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.05);
+	-moz-box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.05);
+	box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.05);
+	background-color: white;
+}
+
+.select-wrapper:after {
+	/*
+    content: '\f078';
+    font: normal normal normal 17px/1 FontAwesome;
+    color: #0ebeff;
+    */
+	right: 11px;
+	top: 6px;
+	height: 34px;
+	padding: 15px 0px 0px 8px;
+	position: absolute;
+	pointer-events: none;
+	border: 0;
+}
+
+
+/* IE11 hide native button (thanks Matt!) */
+
+select::-ms-expand {
+	display: none;
+}
+
+.select-wrapper select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	/* Add some styling */
+	display: block;
+	width: 100%;
+	height: 50px;
+	float: right;
+	margin: 5px 0px;
+	padding: 0px 24px;
+	font-size: 16px;
+	line-height: 1.75;
+	color: #333;
+	background-color: #ffffff;
+	background-image: none;
+	-ms-word-break: normal;
+	word-break: normal;
+	border: 0;
+}
+
+
+
+#upload-select {
+	margin-bottom: 0 !important;
+}
+
+#upload-desc {
+	resize: none;
+}
+
+.upload-btn {
+	width: 100%;
+	height: 55px;
+	background-color: #72D387;
+	color: white;
+	font-weight: bold;
+	text-transform: uppercase;
+	border: 0;
+	border-radius: .3rem;
+}
+
+#close-upload-form {
+	background-color: transparent;
+	border: 0;
+	width: 100%;
+	text-align: center;
+}
+
+#close-upload-form i {
+	color: #B8BEC3;
+	font-size: 30px;
+}

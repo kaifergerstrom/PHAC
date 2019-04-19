@@ -14,6 +14,7 @@
 .header-profile-img {
 	height: 50px;
 	border-radius: 50%;
+	margin-left: 25px;
 }
 
 .header-notifications i {
@@ -52,8 +53,6 @@
 	display: flex; 
 	align-items: center; 
 	justify-content: center;
-
-	margin: 0px 30px;
 
 }
 
@@ -94,4 +93,22 @@
 	justify-content: center;
 	top: 15px;
 	margin-left: 9px;
+}
+
+.open-upload-header {
+	border: 0;
+	height: 50px;
+	background-color: #FF7043;
+	color: white;
+	margin-right: 30px;
+	margin-left: 45px;
+	padding: 0px 30px;
+	border-radius: 3px;
+	font-size: 15px;
+
+}
+
+.open-upload-header i {
+	color: white;
+	margin-right: 5px;
 }

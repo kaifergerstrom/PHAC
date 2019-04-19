@@ -32,6 +32,9 @@ class Forum {
 			$posts_array = array_merge($posts_array, $posts);
 		}
 
+        usort($posts_array, "self::date_compare");  // Sort array by date
+        $posts_array = array_reverse($posts_array);  // Reverse to be newest first!
+
 		return $posts_array;
 
 	}
@@ -67,7 +70,11 @@ public static function time_elapsed_string($datetime, $full = false) {
 }
 
 
-
+    function date_compare($element1, $element2) { 
+        $datetime1 = strtotime($element1['date']); 
+        $datetime2 = strtotime($element2['date']); 
+        return $datetime1 - $datetime2; 
+    }  
 
 
 }

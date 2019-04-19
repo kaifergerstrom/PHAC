@@ -1,7 +1,7 @@
 
 .home-posts-container {
 
-	margin-top: 50px;
+	margin-top: 200px;
 
 }
 
@@ -25,7 +25,7 @@
 
 .post-spacer {
 	display: block;
-	margin: 20px 0px;
+	margin: 30px 0px;
 }
 
 .forum-topics {
@@ -61,7 +61,22 @@
 .post-picture {
 	width: 100%;
 	max-height: 350px;
-	padding-bottom: 15px;
+
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+
+}
+
+.post-picture:hover {
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.post-img-wrapper {
+	overflow: hidden;
+	margin-bottom: 15px;
 }
 
 .post-profile-pic {

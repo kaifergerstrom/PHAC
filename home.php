@@ -24,12 +24,16 @@ if (isset($_GET['topics'])) {
 
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 <link rel="stylesheet" type="text/css" href="css/posts.css">
+<link rel="stylesheet" type="text/css" href="css/home.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<?php include("includes/header.php");?>
+<?php
+include("includes/header.php");
+?>
 
 <div class="forum-topics">
 	
-	<form method="post">
+	<form method="POST">
 		
 
 		<?php
@@ -55,12 +59,15 @@ if (isset($_GET['topics'])) {
 	</form>
 </div>
 
+
+<div class="home-banner"></div>
+
 <div class="home-posts-container">
 	
 
 	<?php
 
-
+	// Get all the posts with the array of topics
 	foreach (Forum::get_posts($topic_list) as $post) {
 
 		$post_user = new Profile($post["user_id"]);
@@ -73,7 +80,7 @@ if (isset($_GET['topics'])) {
 
 			<?php
 			if ($post_img) {
-				echo '<img src="'.$post_img.'" class="post-picture">';
+				echo '<div class="post-img-wrapper"><img src="'.$post_img.'" class="post-picture"></div>';
 			}
 			?>
 

@@ -16,8 +16,7 @@ class User {
 	public static function init() {
 
 		if (self::isLoggedIn()) {
-			$user_id = self::isLoggedIn();
-			self::$user_id = DB::query('SELECT user_id FROM users WHERE user_id=:user_id', array(':user_id'=>$user_id))[0]['user_id'];
+			self::$user_id = self::isLoggedIn();
 			self::$email = DB::query('SELECT email FROM users WHERE user_id=:user_id', array(':user_id'=>$user_id))[0]['email'];
 			self::$firstname = DB::query('SELECT firstname FROM users WHERE user_id=:user_id', array(':user_id'=>$user_id))[0]['firstname'];
 			self::$lastname = DB::query('SELECT lastname FROM users WHERE user_id=:user_id', array(':user_id'=>$user_id))[0]['lastname'];
