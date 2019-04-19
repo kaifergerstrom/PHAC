@@ -4,6 +4,8 @@ require_once("classes/Upload.php");
 
 $error = "";
 
+date_default_timezone_set("America/New_York");  // Set the timezone to New York
+
 if (isset($_POST['upload-btn'])) {
 
 	$post_title = strip_tags($_POST['post-title']);
@@ -25,14 +27,37 @@ if (isset($_POST['upload-btn'])) {
 		$file_uploaded = "";
 	}
 
-	$currdate = date("Y-m-d"). ' ' . date("h:i:sa");
-	$post_id = DB::generateRandomString();
-	$user_id = User::isLoggedIn();
 
-		if (!is_array($file_uploaded)) {
-			DB::query('INSERT INTO posts VALUES (\'\', :forum_id, :post_id, :user_id, :title, :message, \'\', 0, 0, :post_img, :currdate)', array(':forum_id'=>$forum_id, ':post_id'=>$post_id, ':user_id'=>$user_id, ':title'=>$post_title, ':message'=>$post_desc, ':post_img'=>$file_uploaded, ':currdate'=>$currdate));
+	if (strlen($post_title) >= 5 && strlen($post_title) <= 60) {
+
+		if (strlen($post_desc) >= 5) {
+
+			if ($forum_id) {
+
+				// Passes all the checks
+				$currdate = date("Y-m-d"). ' ' . date("h:i:sa");
+				$post_id = DB::generateRandomString();
+				$user_id = User::isLoggedIn();
+
+				if (!is_array($file_uploaded)) {
+					DB::query('INSERT INTO posts VALUES (\'\', :forum_id, :post_id, :user_id, :title, :message, \'\', 0, 0, :post_img, :currdate)', array(':forum_id'=>$forum_id, ':post_id'=>$post_id, ':user_id'=>$user_id, ':title'=>$post_title, ':message'=>$post_desc, ':post_img'=>$file_uploaded, ':currdate'=>$currdate));
+				}
+
+
+			} else {
+				$error = 'No forum selected';
+			}
+
+		} else {
+			$error = 'Invalid post description';
 		}
+
+	} else {
+		$error = 'Invalid title';
 	}
+
+}
+
 
 ?>
 
