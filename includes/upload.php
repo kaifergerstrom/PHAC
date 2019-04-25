@@ -37,7 +37,7 @@ if (isset($_POST['upload-btn'])) {
 				// Passes all the checks
 				$currdate = date("Y-m-d"). ' ' . date("h:i:sa");
 				$post_id = DB::generateRandomString();
-				$user_id = User::isLoggedIn();
+				$user_id = User::getId();
 
 				if (!is_array($file_uploaded)) {
 					DB::query('INSERT INTO posts VALUES (\'\', :forum_id, :post_id, :user_id, :title, :message, \'\', 0, 0, :post_img, :currdate)', array(':forum_id'=>$forum_id, ':post_id'=>$post_id, ':user_id'=>$user_id, ':title'=>$post_title, ':message'=>$post_desc, ':post_img'=>$file_uploaded, ':currdate'=>$currdate));

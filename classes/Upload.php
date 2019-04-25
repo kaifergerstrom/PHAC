@@ -14,7 +14,7 @@ class Upload {
 
 		if ($check) {  // First, check if image
 
-			$user_folder = $dest."/".User::isLoggedIn()."/";
+			$user_folder = $dest."/".User::getId()."/";
 			$user_folder = preg_replace('#/+#','/',$user_folder);
 
 			if (!file_exists($user_folder)) {
@@ -33,7 +33,7 @@ class Upload {
 
 			if (move_uploaded_file($file["tmp_name"], $target_file)) {
 
-				echo ("The file ". basename($file["name"]). " has been uploaded.");
+				// echo ("The file ". basename($file["name"]). " has been uploaded.");
 				$upload_status = True;
 				return $target_file;
 

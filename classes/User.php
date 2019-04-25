@@ -17,15 +17,18 @@ class User {
 
 		if (self::isLoggedIn()) {
 			self::$user_id = self::isLoggedIn();
-			self::$email = DB::query('SELECT email FROM users WHERE user_id=:user_id', array(':user_id'=>$user_id))[0]['email'];
-			self::$firstname = DB::query('SELECT firstname FROM users WHERE user_id=:user_id', array(':user_id'=>$user_id))[0]['firstname'];
-			self::$lastname = DB::query('SELECT lastname FROM users WHERE user_id=:user_id', array(':user_id'=>$user_id))[0]['lastname'];
-			self::$profile_img = DB::query('SELECT profile_img FROM users WHERE user_id=:user_id', array(':user_id'=>$user_id))[0]['profile_img'];
+			self::$email = DB::query('SELECT email FROM users WHERE user_id=:user_id', array(':user_id'=>self::$user_id))[0]['email'];
+			self::$firstname = DB::query('SELECT firstname FROM users WHERE user_id=:user_id', array(':user_id'=>self::$user_id))[0]['firstname'];
+			self::$lastname = DB::query('SELECT lastname FROM users WHERE user_id=:user_id', array(':user_id'=>self::$user_id))[0]['lastname'];
+			self::$profile_img = DB::query('SELECT profile_img FROM users WHERE user_id=:user_id', array(':user_id'=>self::$user_id))[0]['profile_img'];
 			self::$full_name = self::$firstname .' '. self::$lastname;
 		}
 
 	}
 
+	public static function getId() {
+		return self::isLoggedIn();
+	}
 
 	public static function isLoggedIn() {
 

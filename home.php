@@ -22,10 +22,8 @@ if (isset($_GET['topics'])) {
 
 ?>
 
-<link rel="stylesheet" type="text/css" href="css/styles.css">
 <link rel="stylesheet" type="text/css" href="css/posts.css">
 <link rel="stylesheet" type="text/css" href="css/home.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <?php
 include("includes/header.php");

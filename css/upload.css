@@ -167,3 +167,7 @@ select::-ms-expand {
 	color: #B8BEC3;
 	font-size: 30px;
 }
+
+.custom-file-label {
+	font-size: 1.25rem !important;
+}

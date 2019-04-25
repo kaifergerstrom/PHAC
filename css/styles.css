@@ -9,7 +9,7 @@
 
 body {
 	margin: 0;
-	background-color: #EFF3F5;
+	background-color: #EFF3F5 !important;
 }
 
 textarea:focus, input:focus, button:focus, select:focus {

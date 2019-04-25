@@ -1,13 +1,18 @@
 <link rel="stylesheet" type="text/css" href="css/header.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/styles.css">
 
-<?php include("includes/upload.php"); ?>
+<?php 
+require_once("classes/User.php");
+include("includes/upload.php"); 
+?>
 
 <header class="header">
 	
 
 	<div class="header-options">
-		<a href="">Home</a>
+		<a href="/PHAC/home.php">Home</a>
 		<div class="option-spacer"></div>
 		<a href="">Membership</a>
 		<div class="option-spacer"></div>
@@ -34,7 +39,7 @@
 		<i class="far fa-bell"></i>
 	</div>
 
-	<img src="/PHAC/img/profiles/default.png" class="header-profile-img">
+	<a href="profile.php?u=<?php echo User::getId();?>"><img src="/PHAC/img/profiles/default.png" class="header-profile-img"></a>
 
 </header>
 
