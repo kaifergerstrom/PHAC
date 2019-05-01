@@ -72,26 +72,18 @@ include("includes/header.php");
 		$post_img = $post["post_img"];
 		$title = $post["title"];
 		$body = $post["message"];
-
+		$forum_id = $post["forum_id"];
 		?>
-		<div class="post">
 
-			<?php
-			if ($post_img) {
-				echo '<div class="post-img-wrapper"><img src="'.$post_img.'" class="post-picture"></div>';
-			}
-			?>
+		<a href="#">
+			<div class="post">
+				
+				<div class="post-header"><?php echo Forum::get_forum_title($forum_id);?><i>-</i><span><?php echo Forum::time_elapsed_string($post['date']);?></span></div>
+				<div class="post-title"><?php echo $title;?></div>
+				<div class="post-desc"><?php echo $body; ?></div>
 
-			<div class="user-info">
-				<img src="img/profiles/<?php echo $post_user::$profile_img;?>" class="post-profile-pic">
-				<div class="poster-name"><?php echo $post_user::$full_name;?> <span><?php echo Forum::time_elapsed_string($post['date']);?></span></div>
 			</div>
-
-			<div class="post-title"><?php echo $title;?></div>
-
-			<div class="post-preview"><?php echo $body;?></div>
-
-		</div>
+		</a>
 
 		<div class="post-spacer"></div>
 
@@ -102,3 +94,4 @@ include("includes/header.php");
 	?>
 
 </div>
+

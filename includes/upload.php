@@ -35,7 +35,8 @@ if (isset($_POST['upload-btn'])) {
 			if ($forum_id) {
 
 				// Passes all the checks
-				$currdate = date("Y-m-d"). ' ' . date("h:i:sa");
+				$now = new DateTime;
+				$currdate = $now->format('Y-m-d H:i:s');
 				$post_id = DB::generateRandomString();
 				$user_id = User::getId();
 

@@ -8,7 +8,7 @@
 
 .post {
 
-	width: 600px;
+	width: 750px;
 	background-color: #F6F8F9;
 
 	/* Smooth box shadow */
@@ -114,7 +114,8 @@
 .post-title {
 	font-size: 25px;
 	font-weight: bold;
-	margin: 10px 0px;
+	margin: 30px 0px;
+	color: black;
 }
 
 .post-preview {
@@ -179,4 +180,28 @@
 	border: 0;
 	border-radius: 25px;
 	padding: 5px 25px;
+}
+
+
+
+
+.post-header {
+	font-size: 14px;
+	color: #FF7043;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.post-header i {
+	margin: 0px 5px;
+}
+
+.post-header span, .post-header i {
+	font-weight: normal;
+	color: #666;
+	text-transform: none;
+}
+
+.post-desc {
+	color: #666;
 }
